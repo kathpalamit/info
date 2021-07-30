@@ -1,0 +1,1 @@
+# To Create new project use **gradle init**
