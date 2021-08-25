@@ -76,3 +76,24 @@ deployToProd.finalizedBy cleanupTask
 
 defaultTask "task1, task3"
 ```
+
+# Build child project
+
+```
+gradle :web:build
+gradle :web:clean :web:build
+```
+
+# Defining depends on in parent level
+
+```groovy
+Project(':web'){
+    dependecies{
+        implementation project(':services')
+    }
+}
+```
+
+# Finding dependencies.
+
+gradle web:dependecies
